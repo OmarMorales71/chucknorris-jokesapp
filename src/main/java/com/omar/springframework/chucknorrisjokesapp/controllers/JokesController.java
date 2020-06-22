@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class JokesController {
-    JokeService jokeService;
+    private final JokeService jokeService;
 
     public JokesController(JokeService jokeService) {
         this.jokeService = jokeService;
     }
 
-    @RequestMapping("/")
+    @RequestMapping({"/",""})
     public String getJoke(Model model){
         String joke = jokeService.sayJoke();
         model.addAttribute("joke", joke);
