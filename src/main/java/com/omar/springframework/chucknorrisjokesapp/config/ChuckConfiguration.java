@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ChuckConfiguration {
 
-    //Build a bean for a ChuckNorrisQuotes that is a external jar/library
+    //Build a bean for a ChuckNorrisQuotes that is an external jar/library
     @Bean
     public ChuckNorrisQuotes chuckNorrisQuotes(){
         return new ChuckNorrisQuotes();
